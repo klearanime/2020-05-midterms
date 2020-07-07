@@ -1,47 +1,79 @@
 const capitalizeSentences = function (str) {
-  let result = '';
-  for (let i = 0; i < str.length; i++) {
-    if (str[i] === ' ') {
-      result = result + str[i].toUpperCase();  
+   let result = '';
+   for (let i = 0; i < str.length; i++) {
+     if (str[i - 2] === '.' || i === 0) {
+       result = result + str[i].toUpperCase();  
+      }  else result = result + str[i].toLowerCase();
+    }
+    return result;
   }
-}  
-return result 
-}
+  
 
-
-
-function isValidPassword(str) {
-  str = str + ' ' === ' ' || str <= 12; {
-    return false;
+  function isValidPassword(str) {
+    let result = '';
+    for (let i = 0; i < str.length; i++) {
+      if (str[i] === ' ') {
+      } if (str.length < 12) {
+        return false;
+        return false;
+    }
+    return true;
   }
-}
+  }
 
-
-function makeHalfSquares(arr) {
-  let result = arr
+  function makeHalfSquares(arr) {
+    let result = arr
     for (let i = 0; i < arr.length; i++) {
       if (arr.length() % 2 === 0) {
         return result
-          } else if  
-            (str.length() / 2)
-          return result;
-        }
-      }
-     
-  
-const countAs = function (nums) {
-  let result = nums;
-  for (let i = 0; i < nums.length; i++) {
-    if (nums > 90) {
-      return result
+      } 
     }
   }
-}
-
-
-function deleteMiddleLetters() {
   
+  
+  
+  const countAs = function(nums) {
+    let result = nums;
+    for (let i = 0; i < nums.length; i++) {
+      if (nums > 90) {
+        return result
+      }
+    }
+  }
+  
+  
+  const deleteMiddleLetters = function(str) {
+      let result = '';
+      const middle = Math.floor(str.length / 2);
+  for (let i = 0; i < str.length; i++) {
+    if (str.length % 2 === 1) {
+      if(i !== middle) {
+        result = result + str[i];
+      }
+    } else if (i !== middle && i !== middle - 1) {
+        result = result + str[i];
+    }
+  }
+  return result;
 }
+
+const lastIndexOfSpace = function(str) {
+    return str.lastIndexOf(' ');
+  }
+  
+  
+const hyphenateName = function(name) {
+  let result = '';
+  for(let i = 0; i < name.length; i++) {
+    if (i === name.lastIndexOf(' ')) {
+      result = result + '-';
+    } else {
+      result = result + name[i];
+    }
+  }
+  return result;
+}
+
 
 
 if (typeof capitalizeSentences === 'undefined') {
